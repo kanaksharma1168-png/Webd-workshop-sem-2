@@ -114,22 +114,10 @@ function averageSalary(){
 
 
 function countDepartment(){
-
-    let deptCount = {};
-
-    employees.forEach(emp => {
-        if(deptCount[emp.department]){
-            deptCount[emp.department]++;
-        } else{
-            deptCount[emp.department] = 1;
-        }
-    });
-
-    let text = "";
-
-    for(let dept in deptCount){
-        text += dept + ": " + deptCount[dept] + "<br>";
+    let deptname=prompt("Enter Department Name:");
+    let count=employees.filter(emp=> emp.department===deptName).length;
+        document.getElementById("output").innerhtml=
+        "<h3>Employees in"+deptName+":"+count+ "</h3>"
     }
 
-    document.getElementById("output").innerHTML = text;
-}
+
