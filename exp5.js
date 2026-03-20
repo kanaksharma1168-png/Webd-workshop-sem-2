@@ -90,8 +90,6 @@ function totalSalary(){
     "Total Salary of all employees: " + total;
 }
 
-
-
 function averageSalary(){
 
     if(employees.length === 0){
